@@ -375,7 +375,7 @@ nix = { version = "0.26.2", default-features = false, features = ["socket", "sig
 prost-build = { version = "0.12", default-features = false, optional = true }
 tonic-build = { workspace = true, optional = true }
 # update 'openssl_version' in website/config.toml whenever <major.minor> version changes
-openssl-src = { version = "300", default-features = false, features = ["force-engine", "legacy"] }
+openssl-src = { version = "300", default-features = false, features = ["force-engine", "legacy", "fips"] }
 
 [dev-dependencies]
 approx = "0.5.1"
@@ -412,6 +412,7 @@ nix = { git = "https://github.com/vectordotdev/nix.git", branch = "memfd/gnu/mus
 # The `heim` crates depend on `ntapi` 0.3.7 on Windows, but that version has an
 # unaligned access bug fixed in the following revision.
 ntapi = { git = "https://github.com/MSxDOS/ntapi.git", rev = "24fc1e47677fc9f6e38e5f154e6011dc9b270da6" }
+openssl-src = { git = "https://github.com/h0tw1r3/openssl-src-rs.git", branch = "feature-to-enable-fips"}
 
 [features]
 # Default features for *-unknown-linux-gnu and *-apple-darwin

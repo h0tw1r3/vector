@@ -6302,8 +6302,7 @@ checksum = "ff011a302c396a5197692431fc1948019154afc178baf7d8e37367442a4601cf"
 [[package]]
 name = "openssl-src"
 version = "300.3.2+3.3.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a211a18d945ef7e648cc6e0058f4c548ee46aab922ea203e0d30e966ea23647b"
+source = "git+https://github.com/h0tw1r3/openssl-src-rs.git?branch=feature-to-enable-fips#7792280bfda0084f7087e86ed3024aeb3855e529"
 dependencies = [
  "cc",
 ]
